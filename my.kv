@@ -1,0 +1,416 @@
+<WindowManager>
+    loginScreen:    
+    dayScreen:
+
+<LoginScreen>
+    name: "loginScreen"
+
+    username:usernameInp
+    password:passwordInp
+
+    BoxLayout:
+        orientation:"vertical"
+
+        BoxLayout:
+            orientation:'vertical'
+            padding:20
+
+            Image:
+                source:"logo.png"
+            
+            Label:
+                text:"Winterborne Stickland Tennis Club"
+                color: rgba("#AFBFC0ff")
+                size_hint: 1, 0.4
+                pos_hint:{"top":1}
+
+        BoxLayout:
+            orientation:"vertical"
+            spacing: 
+            padding:
+            
+            BoxLayout:
+                orientation:'horizontal'
+                spacing:
+
+                Label:
+                    text:""
+                    size_hint: 0.4, 1
+
+                TextInput:
+                    id:usernameInp
+                    multiline:"False"
+                    size_hint: 1, 0.3
+                    hint_text:"Username:"
+                    text:""
+                    pos_hint:{"top":1}
+                    font_size: 18
+
+                Label:
+                    text:""
+                    size_hint: 0.4, 1
+
+            BoxLayout:
+                orientation:'horizontal'
+                spacing:
+
+                Label:
+                    text:""
+                    size_hint: 0.4, 1
+
+                TextInput:
+                    id:passwordInp
+                    multiline:"False"
+                    size_hint: 1, 0.3
+                    hint_text:"Password:"
+                    text:""
+                    pos_hint:{"top":1}
+                    font_size: 18
+                    password: True
+
+                Label:
+                    text:""
+                    size_hint: 0.4, 1
+
+    
+            BoxLayout:
+                orientation:'horizontal'
+                padding:10
+
+                Label:
+                    text:""
+                
+                Button:
+                    text:'Login'
+                    on_release: root.loginBtn()
+                    pos_hint:{"top":1}
+                    size_hint: 1, 0.6
+                    background_normal: ""
+                    background_color: rgba("#779CABff")
+
+                Label:
+                    text:""
+
+<dayScreen>
+
+    BoxLayout:
+        orientation:'vertical'
+
+        BoxLayout:
+            orientation:'horizontal'
+            size_hint: 1, 0.1
+            padding:10
+
+            Button:
+                id:backwardButton
+                on_release: root.backwardDate()
+                background_normal: ''
+                font_size:36
+                background_color: rgba("#1C2541ff")     
+                text:'-'
+                size_hint: 0.2, 1
+
+            Label:
+                text: root.dayLbl
+
+            Button:
+                id:forwardButton
+                text:'+'
+                background_normal: ""
+                font_size:36
+                background_color: rgba("#1C2541ff")                
+                on_release: root.forwardDate()
+                size_hint: 0.2, 1
+
+        BoxLayout:
+            orientation:'horizontal'
+
+            BoxLayout:
+                orientation:'vertical'
+                padding:10
+                spacing:5
+                size_hint: 0.3, 1
+        
+                Label:
+                    id: sevenAMLbl
+                    text:'7:00 AM'
+
+                Label:
+                    id: eigthAMLbl
+                    text:'8:00 AM'
+
+                Label:
+                    id: nineAMLbl
+                    text:'9:00 AM'
+
+                Label:
+                    id: tenAMLbl
+                    text:'10:00 AM'
+
+                Label:
+                    id: elevenAMLbl
+                    text:'11:00 AM'
+
+                Label:
+                    id: twelvePMlbl
+                    text:'12:00 PM'
+
+                Label:
+                    id: onePMLbl
+                    text:'13:00 PM'
+
+                Label:
+                    id: twoPMLbl
+                    text:'14:00 PM'
+
+                Label:
+                    id: threePMLbl
+                    text:'15:00 PM'
+
+                Label:
+                    id: fourPMLbl
+                    text:'16:00 PM'
+
+                Label:
+                    id: fivePMLbl
+                    text:'17:00 PM'
+
+                Label:
+                    id: sixPMLbl
+                    text:'18:00 PM'
+
+                Label:
+                    id: sevenPMLbl
+                    text:'19:00 PM'
+            
+            BoxLayout:
+                orientation:'vertical'
+                padding: 10
+                spacing: 5
+
+                Button:
+                    id: sevenAM
+                    text: 'Available'
+                    background_normal: ''
+                    background_color: rgba("#779CABff")           
+                    disabled: False
+                    on_release: root.book7am()
+
+                Button:
+                    id: eigthAM
+                    text: 'Available'
+                    background_normal: ''
+                    background_color: rgba("#779CABff")           
+                    disabled: False
+                    on_release: root.book8am()
+
+                Button:
+                    id: nineAM
+                    text: 'Available'
+                    background_normal: ''
+                    background_color: rgba("#779CABff")           
+                    disabled: False
+                    on_release: root.book9am()
+
+                Button:
+                    id: tenAM
+                    text: 'Available'
+                    background_normal: ''
+                    background_color: rgba("#779CABff")           
+                    disabled: False
+                    on_release: root.book10am()
+
+                Button:
+                    id: elevenAM
+                    text: 'Available'
+                    background_normal: ''
+                    background_color: rgba("#779CABff")           
+                    disabled: False
+                    on_release: root.book11am()
+
+                Button:
+                    id: twelvePM
+                    text: 'Available'
+                    background_normal: ''
+                    background_color: rgba("#779CABff")           
+                    disabled: False
+                    on_release: root.book12pm()
+
+                Button:
+                    id: onePM
+                    text: 'Available'
+                    background_normal: ''
+                    background_color: rgba("#779CABff")           
+                    disabled: False
+                    on_release: root.book1pm()
+
+                Button:
+                    id: twoPM
+                    text: 'Available'
+                    background_normal: ''
+                    background_color: rgba("#779CABff")           
+                    disabled: False
+                    on_release: root.book2pm()
+
+                Button:
+                    id: threePM
+                    text: 'Available'
+                    background_normal: ''
+                    background_color: rgba("#779CABff")           
+                    disabled: False
+                    on_release: root.book3pm()
+
+                Button:
+                    id: fourPM
+                    text: 'Available'
+                    background_normal: ''
+                    background_color: rgba("#779CABff")           
+                    disabled: False
+                    on_release: root.book4pm()
+
+                Button:
+                    id: fivePM
+                    text: 'Available'
+                    background_normal: ''
+                    background_color: rgba("#779CABff")           
+                    disabled: False
+                    on_release: root.book5pm()
+
+                Button:
+                    id: sixPM
+                    text: 'Available'
+                    background_normal: ''
+                    background_color: rgba("#779CABff")           
+                    disabled: False
+                    on_release: root.book6pm()
+
+                Button:
+                    id: sevenPM
+                    text: 'Available'
+                    background_normal: ''
+                    background_color: rgba("#779CABff")           
+                    disabled: False
+                    on_release: root.book7pm()
+
+            BoxLayout:
+                orientation:'vertical'
+                padding: 10
+                spacing: 5
+                size_hint: 0.2, 1
+
+                Button:
+                    id: sevenAMCancel
+                    text: 'X'
+                    background_normal: ''
+                    background_color: rgba("#B26E63ff")           
+                    disabled: False
+                    on_release: root.cancel7am()
+
+                Button:
+                    id: eigthAMCancel
+                    text: 'X'
+                    background_normal: ''
+                    background_color: rgba("#B26E63ff")           
+                    disabled: False
+                    on_release: root.cancel8am()
+
+                Button:
+                    id: nineAMCancel
+                    text: 'X'
+                    background_normal: ''
+                    background_color: rgba("#B26E63ff")           
+                    disabled: False
+                    on_release: root.cancel9am()
+
+                Button:
+                    id: tenAMCancel
+                    text: 'X'
+                    background_normal: ''
+                    background_color: rgba("#B26E63ff")           
+                    disabled: False
+                    on_release: root.cancel10am()
+
+                Button:
+                    id: elevenAMCancel
+                    text: 'X'
+                    background_normal: ''
+                    background_color: rgba("#B26E63ff")           
+                    disabled: False
+                    on_release: root.cancel11am()
+
+                Button:
+                    id: twelvePMCancel
+                    text: 'X'
+                    background_normal: ''
+                    background_color: rgba("#B26E63ff")           
+                    disabled: False
+                    on_release: root.cancel12pm()
+
+                Button:
+                    id: onePMCancel
+                    text: 'X'
+                    background_normal: ''
+                    background_color: rgba("#B26E63ff")           
+                    disabled: False
+                    on_release: root.cancel1pm()
+
+                Button:
+                    id: twoPMCancel
+                    text: 'X'
+                    background_normal: ''
+                    background_color: rgba("#B26E63ff")           
+                    disabled: False
+                    on_release: root.cancel2pm()
+
+                Button:
+                    id: threePMCancel
+                    text: 'X'
+                    background_normal: ''
+                    background_color: rgba("#B26E63ff")           
+                    disabled: False
+                    on_release: root.cancel3pm()
+
+                Button:
+                    id: fourPMCancel
+                    text: 'X'
+                    background_normal: ''
+                    background_color: rgba("#B26E63ff")           
+                    disabled: False
+                    on_release: root.cancel4pm()
+
+                Button:
+                    id: fivePMCancel
+                    text: 'X'
+                    background_normal: ''
+                    background_color: rgba("#B26E63ff")           
+                    disabled: False
+                    on_release: root.cancel5pm()
+
+                Button:
+                    id: sixPMCancel
+                    text: 'X'
+                    background_normal: ''
+                    background_color: rgba("#B26E63ff")           
+                    disabled: False
+                    on_release: root.cancel6pm()
+
+                Button:
+                    id: sevenPMCancel
+                    text: 'X'
+                    background_normal: ''
+                    background_color: rgba("#B26E63ff")           
+                    disabled: False
+                    on_release: root.cancel7pm()
+
+<WrongPasswordPopup>
+    auto_dismiss: True
+    size_hint: 1, 0.2
+    title:"Incorrect Details" 
+    separator_color: 0.236, 0.254, 0.17, 1
+    
+    BoxLayout:
+        orientation:"vertical"
+        padding:10
+
+        Label:
+            text: "Incorrect Details.Please try again."
